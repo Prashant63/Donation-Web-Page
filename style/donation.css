@@ -1,0 +1,162 @@
+.center{
+	margin: auto;
+}
+
+.left{
+	margin: auto auto auto 0;
+}
+
+.right{
+	margin: auto 0 auto auto;
+}
+
+.banner {
+    position:relative;
+    background-color:#424242;
+    height:70px !important;
+    width:100% !important;
+    border-radius: 6px;
+    color:#FEFEFE;
+    text-align: center;
+    font-size: x-large;
+    vertical-align: middle;
+    line-height: 70px;
+}
+.banner:after {
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    left: 80%;
+    margin-left: -10px;
+    content:'';
+    width: 0;
+    height: 0;
+    border-top: solid 10px #424242;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+
+.container{
+	margin: 30px auto auto auto;
+    text-align: center;
+    width: 500px;
+}
+
+.jumbotron{
+    margin-top: 3%;
+    padding:0px !important;
+    border: 2px solid #eee;
+    border-radius: 0px !important;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.slider{
+	background-color: #ff6d00;
+    height: 20px;
+    border-bottom: #eee;
+}
+
+div.detail div:first-child, div.detail div:last-child{
+	margin: 5% auto;
+}
+
+div p{
+	text-align: left;
+	margin: 0 14%;
+}
+
+.standOut{
+	color: #ff6d00;
+	font-weight: 600;
+}
+
+.flex-donate{
+	flex-direction: row;
+	display: -webkit-flex;
+	display: flex;
+	margin: 5% 10% !important;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.flex-donate div, button{
+	width: 40%;
+}
+
+.currencyinput {
+    border-radius: 5px;
+    border: 2px solid #eee;
+    width:50%;
+}
+.currencyinput input {
+    border: 0;
+    height: 45px;
+    width:80%;
+    font-size: 25px;
+}
+
+.currencyinput span:first-child{
+    font-size: 25px;
+}
+
+.info{
+    font-style:italic;
+    font-size:20px;
+    color:#108eda;
+}
+
+.btn-success, .btn-success:hover{
+    background-color: #35c535;
+    font-size:20px;
+}
+
+.flex-container{
+	flex-direction: row;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-items{
+	border: 2px solid #eee;
+    padding:3% 5%;
+    background-color: rgba(238, 238, 238, 0.45);
+    border-radius: 8px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content{
+    width: 200px;
+    margin:30px auto;
+    background-color: #424242;
+    color:#FEFEFE;
+}
+
+.modal-body p{
+    text-align: center;
+    font-size: 22px;
+}
+
+.modal-body button{
+    width:20px;
+}
+
+.modal-body i{
+    font-size: xx-large;
+}
+
+a, a:hover, a:visited{
+    color:#FEFEFE;
+}
+
+input:focus{
+    outline:none;
+}
+
+@media only screen and (max-width: 520px){
+    .container, .container > div{
+        width: auto !important;
+    }
+}

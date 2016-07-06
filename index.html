@@ -1,0 +1,80 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Donation Board</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style/donation.css">
+		<script src="script/jquery.min.js"></script>
+		<script src="script/bootstrap.min.js"></script>
+		<script src="script/angular.min.js"></script>
+		<script src="script/app.js"></script>
+		<script src="controllers/donationController.js"></script>
+	</head>
+	<body ng-app="app">
+
+		<div class="container" ng-controller="donationCtrl">
+			<div class="banner">
+				${{(totalAmount - donatedAmount)>0 ? (totalAmount - donatedAmount):0}} still needed for this project
+			</div>
+
+			<div class="jumbotron">
+				<div class="slider" id="slider"></div>
+
+				<div class="detail">
+					<div>
+						<p><span class="standOut">Only 3 days left</span> to fund this project.</p>
+					</div>
+
+					<div>
+						<p>Join the {{donerCount}} other donors who have
+							already supported this project. Every 
+							dollar helps.
+						</p>
+					</div>
+
+					<div class="flex-donate">
+							<span class="currencyinput"><span>&dollar;</span><input type="text" name="currency" ng-model="amount"></span>
+							<button ng-click="donate()" ng-disabled="donation < 0" class="btn btn-success">Give Now</button>
+							<span class="left info">why give ${{amount}}?</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex-container">
+					<button type="button" class="btn btn-info btn-lg flex-items" data-toggle="modal" data-target="#saved">Save for later</button>
+					<button type="button" class="btn btn-info btn-lg flex-items" data-toggle="modal" data-target="#share">Tell your friends</button>
+			</div>
+
+			  <div class="modal fade" id="saved" role="dialog">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			        <div class="modal-body">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <p>Saved!</p>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="modal fade" id="share" role="dialog">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			      	<div class="modal-header">
+			      		<button type="button" class="close" data-dismiss="modal">&times;</button>
+			      	</div>
+				    
+			        <div class="modal-body">
+			          <p>Yay, I donated!</p>
+			          <div>
+			          	<a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+			          	<a href="http://www.twitter.com" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+		</div>		  
+	</body>
+	</html>
